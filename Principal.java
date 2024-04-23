@@ -8,9 +8,7 @@ public class Principal {
 
         int opcao;
 
-        // Menu em looping
-
-        do { 
+        do {
             System.out.println("\nMenu Principal:");
             System.out.println("1. Inserir Nome");
             System.out.println("2. Exibir Nomes");
@@ -26,19 +24,21 @@ public class Principal {
                     System.out.print("Digite o nome a ser inserido: ");
                     String nome = scanner.nextLine();
                     manipulador.inserirNome(nome);
+                    break;
                 case 2:
                     manipulador.exibirNomes();
+                    break;
                 case 3:
                     manipulador.apagarArquivo();
+                    break;
                 case 0:
                     System.out.println("Saindo do programa...");
+                    break;
                 default:
                     System.out.println("Opção inválida!");
             }
-
-            // Aqui irá repetir o looping até que o usuário escolher sair
-
         } while (opcao != 0);
+
         scanner.close();
     }
 }

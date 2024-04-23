@@ -7,8 +7,6 @@ public class ManipuladorDeArquivo {
 
     private final String nomeArquivo = "nomes.txt";
 
-    // O metodo a seguir será utilizado para inserir o nome no arquivo
-
     public void inserirNome(String nome) {
         try {
             File arquivo = new File(nomeArquivo);
@@ -26,8 +24,6 @@ public class ManipuladorDeArquivo {
             System.err.println("Erro ao inserir nome: " + e.getMessage());
         }
     }
-
-    // Em seguida realizaremos a função para exibir os nomes arquivados
 
     public void exibirNomes() {
         try {
@@ -50,8 +46,6 @@ public class ManipuladorDeArquivo {
             System.err.println("Erro ao exibir nomes: " + e.getMessage());
         }
     }
-
-    // Aqui apagamos todo o arquivo (todos os nomes registrados)
 
     public void apagarArquivo() {
         try {
